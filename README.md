@@ -106,6 +106,20 @@ Wir nehmen an, dass durch die Abholung die Eigenschaften der **Reservation** auf
 Dadurch verfügt der **Mietvertrag** über die gleichen Eigenschaften wie die **Reservation**.
 Wir halten uns die Möglichkeit offen, sowohl auf dem **Mietvertrag**, als auch der **Reservation** neue Eigenschaften hinzu zu fügen.
 
+## Konzeption
+
+### Kontext-Diagramm
+
+Das Kontext-Diagramm zeigt unsere Akteure **Sachbearbeiter**, **Kunde** und das **Softwaresystem**, sowie unsere Objekte **Kunde**, **Auto** und **Reservation**.
+Der Kunde ist sowohl Akteur, als auch ein Objekt, weil der Sachbearbeiter Kunden im System verwalten und suchen kann.
+
+![Kontext-Diagramm (Übersicht)]("Context (C4)-\303\234bersicht.png")
+
+Hier sind die Entitäten und Akteure noch genauer dargestellt.
+
+![Kontext-Diagramm (Entitäten)]("Context (C4)-Entit\303\244ten.png")
+![Kontext-Diagramm (Akteure)](Context (C4)-Akteure.png)
+
 ## Arbeitspakete
 Für unsere Arbeit sind bereits einige Arbeitspakete definiert.
 
