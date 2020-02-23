@@ -5,10 +5,10 @@ Dieses Repository enthält den Code für das Autovermietungssystem "CarRent" als
 Die Anforderungen für diese Software werden unterteilt in Anforderungen aus der Aufgabe und Anforderungen vom Kunden.
 
 **Anforderungen aus der Aufgabe**:
-- Die Daten sollen mittels [Repository Pattern](1) in einer Datenbank gespeichert werden können.
-- Die Business Logik soll auf dem Backend laufen und [REST API](2)s anbieten.
-- Es soll zuerst ein [Monolith](3) erstellt werden und später auf eine [Micro Service Architektur](3) überführt werden.
-- *Optional*: Der Web-Client benutzt die [REST API](2) um die Funktionen auszuführen.
+- Die Daten sollen mittels [Repository Pattern][1] in einer Datenbank gespeichert werden können.
+- Die Business Logik soll auf dem Backend laufen und [REST API][2]s anbieten.
+- Es soll zuerst ein [Monolith](3) erstellt werden und später auf eine [Micro Service Architektur][3] überführt werden.
+- *Optional*: Der Web-Client benutzt die [REST API][2] um die Funktionen auszuführen.
 
 **Anforderungen vom Kunden**:
 - Der Sachbearbeiter kann Kunden mit Namen und Adresse und Kundennummer im System verwalten, d.h. erfassen, bearbeiten, löschen und den Kunden mit dessen Namen oder Kundennummer suchen.
@@ -27,8 +27,8 @@ Wird die Reservation gespeichert, so wird sie mit einer Reservationsnummer abgel
 
 Wir finden in der ersten Anforderung die Rolle **Sachbearbeiter** mit den Verben *erfassen*, *bearbeiten*, *löschen* und *suchen*.
 
-Die Begriffe *erfassen*, *bearbeiten*, *löschen* und *suchen* können auf die vier [**CRUD-Operationen**](4) zurückgeführt werden.
-Gemäss [Wikipedia (CRUD)](4) können wir sowohl für unsere Datenbank, als auch die REST API diese Operationen strukturiert umsetzen.
+Die Begriffe *erfassen*, *bearbeiten*, *löschen* und *suchen* können auf die vier [**CRUD-Operationen**][4] zurückgeführt werden.
+Gemäss [Wikipedia (CRUD)][4] können wir sowohl für unsere Datenbank, als auch die REST API diese Operationen strukturiert umsetzen.
 
 Verb | CRUD-Operation | Datenbank (SQL) | REST (HTTP)
 --- | --- | --- | ---
@@ -119,8 +119,8 @@ Für unsere Arbeit sind bereits einige Arbeitspakete definiert.
 > Erstellen Sie das Domain Model und schreiben Sie alle Use Cases im "Brief"-Format auf.
 
 **Erwartetes Ergebnis**:
-- Das [Domain Model](1) als UML-Diagramm
-- Die [Use Cases](7) im [Brief-Format](8)
+- Das [Domain Model][1] als UML-Diagramm
+- Die [Use Cases][7] im [Brief-Format][8]
 
 ### Arbeitspaket 3 - 4+1 Views
 > Erstellen Sie ein Deployment Diagramm mithilfe des Container Diagramm des Big Picture.\
@@ -131,7 +131,7 @@ Für unsere Arbeit sind bereits einige Arbeitspakete definiert.
 - Komponenten- und Klassendiagramm das sich am Domänenmodell orientiert.
 
 ### Arbeitspaket 4 - Implementierung
-> Implementieren Sie das System mithilfe der Anforderungen und den verschiedenen [Architektur-Views](9).
+> Implementieren Sie das System mithilfe der Anforderungen und den verschiedenen [Architektur-Views][9].
 
 **Erwartetes Resultat**:
 - Source Code der Software "CarRent" das sich an den bisherigen Arbeitspaketen orientiert.
@@ -148,7 +148,7 @@ Für unsere Arbeit sind bereits einige Arbeitspakete definiert.
 > Erstellen Sie eine Dokumentation mit Markdown, die sich ungefähr an die Vorgaben des arc42 halten.
 
 **Erwartetes Resultat**:
-- Dokumentation als MD-Datei(en) die sich nach [arc42](10) orientiert.
+- Dokumentation als MD-Datei(en) die sich nach [arc42][10] orientiert.
 
 **Annahmen**:
 - Die Dokumentation ist ein Benutzerhandbuch.
