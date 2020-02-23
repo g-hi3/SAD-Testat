@@ -113,12 +113,12 @@ Wir halten uns die Möglichkeit offen, sowohl auf dem **Mietvertrag**, als auch 
 Das Kontext-Diagramm zeigt unsere Akteure **Sachbearbeiter**, **Kunde** und das **Softwaresystem**, sowie unsere Objekte **Kunde**, **Auto** und **Reservation**.
 Der Kunde ist sowohl Akteur, als auch ein Objekt, weil der Sachbearbeiter Kunden im System verwalten und suchen kann.
 
-![Kontext-Diagramm (Übersicht)]("Context (C4)-\303\234bersicht.png")
+![Kontext-Diagramm (Übersicht)](Context%20(C4)-Übersicht.png?raw=true)
 
 Hier sind die Entitäten und Akteure noch genauer dargestellt.
 
-![Kontext-Diagramm (Entitäten)]("Context (C4)-Entit\303\244ten.png")
-![Kontext-Diagramm (Akteure)](Context (C4)-Akteure.png)
+![Kontext-Diagramm (Entitäten)](Context%20(C4)-Entitäten.png?raw=true)
+![Kontext-Diagramm (Akteure)](Context%20(C4)-Akteure.png?raw=true)
 
 ## Arbeitspakete
 Für unsere Arbeit sind bereits einige Arbeitspakete definiert.
