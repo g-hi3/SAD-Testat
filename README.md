@@ -7,7 +7,7 @@ Die Anforderungen für diese Software werden unterteilt in Anforderungen aus der
 **Anforderungen aus der Aufgabe**:
 - Die Daten sollen mittels [Repository Pattern][1] in einer Datenbank gespeichert werden können.
 - Die Business Logik soll auf dem Backend laufen und [REST API][2]s anbieten.
-- Es soll zuerst ein [Monolith](3) erstellt werden und später auf eine [Micro Service Architektur][3] überführt werden.
+- Es soll zuerst ein [Monolith][3] erstellt werden und später auf eine [Micro Service Architektur][3] überführt werden.
 - *Optional*: Der Web-Client benutzt die [REST API][2] um die Funktionen auszuführen.
 
 **Anforderungen vom Kunden**:
@@ -124,7 +124,7 @@ Hier sind die Entitäten und Akteure noch genauer dargestellt.
 Für unsere Arbeit sind bereits einige Arbeitspakete definiert.
 
 ### Arbeitspaket 1 - Big Picture
-> Erstellen Sie mittels [C4-Pattern](6) das Big-Picture des Systems.
+> Erstellen Sie mittels [C4-Pattern][6] das Big-Picture des Systems.
 
 **Erwartetes Resultat**:
 - Ein vier-stufiges Diagram im C4-Pattern, welches die Software CarRent definiert und den definierten Anforderungen entspricht.
