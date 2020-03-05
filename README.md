@@ -120,6 +120,18 @@ Hier sind die Entitäten und Akteure noch genauer dargestellt.
 ![Kontext-Diagramm (Entitäten)](Context%20(C4)-Entitäten.png?raw=true)
 ![Kontext-Diagramm (Akteure)](Context%20(C4)-Akteure.png?raw=true)
 
+### Komponentendiagramm
+
+Es gibt im Wesentlichen diese Komponenten:
+
+ - REST Client
+ - REST API
+ - REST Server
+ - Database Controller
+ - Database
+
+![Komponentendiagramm](Component%20Diagram.png?raw=true)
+
 ## Arbeitspakete
 Für unsere Arbeit sind bereits einige Arbeitspakete definiert.
 

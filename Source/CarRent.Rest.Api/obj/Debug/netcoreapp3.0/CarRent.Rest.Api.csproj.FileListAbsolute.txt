@@ -1,0 +1,8 @@
+D:\Schule\HF\Softwarearchitektur und -design\SAD-Testat\Source\CarRent.Rest.Api\bin\Debug\netcoreapp3.0\CarRent.Rest.Api.deps.json
+D:\Schule\HF\Softwarearchitektur und -design\SAD-Testat\Source\CarRent.Rest.Api\bin\Debug\netcoreapp3.0\CarRent.Rest.Api.dll
+D:\Schule\HF\Softwarearchitektur und -design\SAD-Testat\Source\CarRent.Rest.Api\bin\Debug\netcoreapp3.0\CarRent.Rest.Api.pdb
+D:\Schule\HF\Softwarearchitektur und -design\SAD-Testat\Source\CarRent.Rest.Api\obj\Debug\netcoreapp3.0\CarRent.Rest.Api.csprojAssemblyReference.cache
+D:\Schule\HF\Softwarearchitektur und -design\SAD-Testat\Source\CarRent.Rest.Api\obj\Debug\netcoreapp3.0\CarRent.Rest.Api.AssemblyInfoInputs.cache
+D:\Schule\HF\Softwarearchitektur und -design\SAD-Testat\Source\CarRent.Rest.Api\obj\Debug\netcoreapp3.0\CarRent.Rest.Api.AssemblyInfo.cs
+D:\Schule\HF\Softwarearchitektur und -design\SAD-Testat\Source\CarRent.Rest.Api\obj\Debug\netcoreapp3.0\CarRent.Rest.Api.dll
+D:\Schule\HF\Softwarearchitektur und -design\SAD-Testat\Source\CarRent.Rest.Api\obj\Debug\netcoreapp3.0\CarRent.Rest.Api.pdb
