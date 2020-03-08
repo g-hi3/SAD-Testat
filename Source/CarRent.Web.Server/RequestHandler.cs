@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Net;
 
 namespace CarRent.Web.Server
@@ -66,13 +67,54 @@ namespace CarRent.Web.Server
     
     public class RequestHandler
     {
+        private static readonly CarRentDbContext context = new CarRentDbContext();
+        
         public IDictionary<string, string> HandleRequest(Request request)
         {
-            // TODO: Insert CRUD methods using Entity Framework here :)
-            var response = new Dictionary<string, string>(request.Arguments);
-            response["__type__"] = request.Type.ToString();
-            response["__entity__"] = request.EntityName;
-            return response;
+            string query = "";
+            switch (request.Type)
+            {
+                case RequestType.Create:
+                    query += "INSERT INTO " + request.EntityName;
+                    break;
+                
+                case RequestType.Get:
+                    query += "SELECT * FROM " + request.EntityName;
+                    break;
+                
+                case RequestType.Update:
+                    query += "UPDATE " + request.EntityName;
+                    break;
+                
+                case RequestType.Delete:
+                    query += "DELETE FROM " + request.EntityName;
+                    break;
+                
+                case RequestType.Default:
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+
+            var isFirst = true;
+            foreach (var nextArgument in request.Arguments)
+            {
+                if (nextArgument.Key.StartsWith("__"))
+                    continue;
+
+                if (isFirst)
+                {
+                    query += " WHERE ";
+                    isFirst = false;
+                }
+                else
+                {
+                    query += " AND ";
+                }
+
+                query += nextArgument.Key + " = " + nextArgument.Value;
+            }
+            // should execute query here I guess.
+            return new Dictionary<string, string>();
         }
     }
 }

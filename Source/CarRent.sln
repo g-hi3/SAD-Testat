@@ -1,15 +1,29 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRent.Rest.Api", "CarRent.Rest.Api\CarRent.Rest.Api.csproj", "{0434A081-2779-486B-9C41-0C74997F2FAA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRent.Rest.Api.Test", "CarRent.Rest.Api.Test\CarRent.Rest.Api.Test.csproj", "{CBCF2651-ACF1-40CD-A411-781015E3D0BD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRent.Web.Server", "CarRent.Web.Server\CarRent.Web.Server.csproj", "{09CC9AE5-7417-41A1-A7A9-03066C9B6445}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{B96A44D3-7139-47E1-98E9-9D7665DDE958}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B96A44D3-7139-47E1-98E9-9D7665DDE958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B96A44D3-7139-47E1-98E9-9D7665DDE958}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B96A44D3-7139-47E1-98E9-9D7665DDE958}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B96A44D3-7139-47E1-98E9-9D7665DDE958}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{0434A081-2779-486B-9C41-0C74997F2FAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
