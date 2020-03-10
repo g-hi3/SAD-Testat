@@ -1,6 +1,7 @@
-﻿using System;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Net;
+using Database;
 
 namespace CarRent.Web.Server
 {
@@ -64,57 +65,83 @@ namespace CarRent.Web.Server
             return apiRequest;
         }
     }
+
+    public interface ICreatable
+    {
+        void Create(string entityName, IDictionary<string, string> arguments);
+    }
+
+    public interface IReadable
+    {
+        IEnumerable Read(string entityName, IDictionary<string, string> arguments);
+    }
+
+    public interface IUpdateable
+    {
+        void Update(string entityName, IDictionary<string, string> arguments);
+    }
+
+    public interface IDeleteable
+    {
+        void Delete(string entityName, IDictionary<string, string> arguments);
+    }
+
+    public interface ICrudHandler : ICreatable, IReadable, IUpdateable, IDeleteable
+    {
+        
+    }
     
     public class RequestHandler
     {
-        private static readonly CarRentDbContext context = new CarRentDbContext();
-        
-        public IDictionary<string, string> HandleRequest(Request request)
+        public IDictionary<string, string> HandleRequest(Request request, ICrudHandler handler)
         {
-            string query = "";
-            switch (request.Type)
+            IDictionary<string, string> response = new Dictionary<string, string>();
+            if (request.Type == RequestType.Create)
             {
-                case RequestType.Create:
-                    query += "INSERT INTO " + request.EntityName;
-                    break;
-                
-                case RequestType.Get:
-                    query += "SELECT * FROM " + request.EntityName;
-                    break;
-                
-                case RequestType.Update:
-                    query += "UPDATE " + request.EntityName;
-                    break;
-                
-                case RequestType.Delete:
-                    query += "DELETE FROM " + request.EntityName;
-                    break;
-                
-                case RequestType.Default:
-                default:
-                    throw new ArgumentOutOfRangeException();
+                handler.Create(request.EntityName, request.Arguments);
+                response["result"] = "success";
             }
 
-            var isFirst = true;
-            foreach (var nextArgument in request.Arguments)
+            if (request.Type == RequestType.Get)
             {
-                if (nextArgument.Key.StartsWith("__"))
-                    continue;
-
-                if (isFirst)
+                IEnumerable foundObjects = handler.Read(request.EntityName, request.Arguments);
+                var objectArray = "[";
+                var isFirst = true;
+                foreach (var nextObject in foundObjects)
                 {
-                    query += " WHERE ";
-                    isFirst = false;
-                }
-                else
-                {
-                    query += " AND ";
+                    if (isFirst)
+                    {
+                        objectArray += nextObject;
+                        isFirst = false;
+                    }
+                    else
+                    {
+                        objectArray += "," + nextObject;
+                    }
                 }
 
-                query += nextArgument.Key + " = " + nextArgument.Value;
+                response["result"] = "success";
+                response["selected"] = objectArray + "]";
             }
-            // should execute query here I guess.
-            return new Dictionary<string, string>();
+
+            if (request.Type == RequestType.Update)
+            {
+                handler.Update(request.EntityName, request.Arguments);
+                response["result"] = "success";
+            }
+
+            if (request.Type == RequestType.Delete)
+            {
+                handler.Delete(request.EntityName, request.Arguments);
+            }
+
+            if (request.Type == RequestType.Default)
+            {
+                response["result"] = "failure";
+                response["message"] = "Unknown request type";
+            }
+            
+            return response;
         }
     }
 }

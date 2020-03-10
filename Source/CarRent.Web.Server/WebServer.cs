@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading;
+using Database;
 
 namespace CarRent.Web.Server
 {
@@ -102,7 +103,13 @@ namespace CarRent.Web.Server
          Console.WriteLine($"Request received!: {relativePath}");
          var apiRequest = Request.FromHttpRequest(httpRequest);
          var requestHandler = new RequestHandler();
-         var response = requestHandler.HandleRequest(apiRequest);
+         IDictionary<string, string> response;
+         using (var context = new CarRentDbContext())
+         {
+            var crudHandler = new CrudHandler(context);
+            response = requestHandler.HandleRequest(apiRequest, crudHandler);
+         }
+
          var stringParts = response.Select(nextProperty => $"\"{nextProperty.Key}\": \"{nextProperty.Value}\"").ToList();
          return "{" + string.Join(',', stringParts) + "}";
       }
